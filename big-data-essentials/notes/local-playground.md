@@ -10,5 +10,5 @@ Notes about working with Docker containers provided by `bigdatateam`:
 #### Run
 
 ```
-docker run -it --name hysh-full --rm -v $(pwd):/home/vvlasov -p 8888:8888 -p 50070:50070 -d bigdatateam/hysh-full:py3-c1
+docker run -it --name hysh-full --rm -v $DATA_DIR:/home/jovyan/work -p 8080:80 -d bigdatateam/hysh-full:py3-c1
 ```
