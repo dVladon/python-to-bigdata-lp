@@ -19,8 +19,8 @@ for line in sys.stdin:
     except ValueError:
         continue
     
-    words = re.split("\W*\s+\W*", text, flags=re.UNICODE)
+    words = re.split(r"\W*\s+\W*", text, flags=re.UNICODE)
     counter = Counter(words)
     for word, count in counter.items():
-        log("reporter:counter:Wiki stats,Total words,%d" % 1)
+        log("reporter:counter:Wiki stats,Total words,%d" % count)
         print("%s\t%d" % (word.lower(), count))
