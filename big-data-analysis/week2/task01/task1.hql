@@ -35,9 +35,8 @@ INSERT OVERWRITE TABLE posts_sample
 PARTITION (year, month)
 SELECT id, year, month;
 
+-- Count posts by months
 
-
-
-
-
---
+SELECT year, month, COUNT(*) as count 
+FROM posts_sample 
+GROUP BY year, month ORDER BY month;
